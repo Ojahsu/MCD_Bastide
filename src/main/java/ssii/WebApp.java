@@ -20,6 +20,6 @@ public class WebApp {
 	// URL de connexion : jdbc:h2:tcp://localhost:9092/mem:testdb
 	@Bean(initMethod = "start", destroyMethod = "stop")
 	public Server h2Server() throws SQLException {
-		return Server.createTcpServer("-tcp", "-tcpAllowOthers", "-tcpPort", "9092");
+		return Server.createTcpServer("-tcp", "-tcpAllowOthers", "-tcpPort", "9094");
 	}
 }

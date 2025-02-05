@@ -18,8 +18,17 @@ public class Participation {
     private Integer id;
 
     @NotBlank
+    @NonNull
     private String role;
 
     @NonNull
     private Float pourcentage;
+
+    @ManyToOne
+    @NonNull
+    private Projet projet;
+
+    @ManyToOne
+    @NonNull
+    private Personne personne;
 }
