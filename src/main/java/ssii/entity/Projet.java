@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Getter
@@ -26,4 +27,8 @@ public class Projet {
     private LocalDate debut;
 
     private LocalDate fin;
+
+    @OneToMany(mappedBy = "projet")
+    @NonNull
+    private List<Participation> participations;
 }

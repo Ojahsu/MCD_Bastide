@@ -17,7 +17,7 @@ public class WebApp {
 
 	// Optionnel : Démarre un serveur H2 en mode TCP
 	// Permet d'accéder à la base de données H2 depuis un client externe (comme DBeaver ou IntelliJ IDEA)
-	// URL de connexion : jdbc:h2:tcp://localhost:9092/mem:testdb
+	// URL de connexion : jdbc:h2:tcp://localhost:9094/mem:testdb
 	@Bean(initMethod = "start", destroyMethod = "stop")
 	public Server h2Server() throws SQLException {
 		return Server.createTcpServer("-tcp", "-tcpAllowOthers", "-tcpPort", "9094");
